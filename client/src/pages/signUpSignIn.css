@@ -1,0 +1,7 @@
+.sign-in-sign-up-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+}
