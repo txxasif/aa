@@ -1,10 +1,10 @@
 const admin = {
-    name: 'asif',
+    name: 'asif@gmail.com',
     pass: 'asif',
 }
 
 export function getUserStatus(user){
-    if(user.name === admin.name && user.pass === admin.pass){
+    if(user.email === admin.name && user.pass === admin.pass){
         return true;
     }else{
         return false;

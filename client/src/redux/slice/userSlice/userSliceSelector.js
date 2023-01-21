@@ -1,4 +1,10 @@
-import { createAction } from '@reduxjs/toolkit';
-export const userSelector =(state) => {
-    console.log(state);
-    return state.user}
+import { createSelector } from '@reduxjs/toolkit';
+export const userSelecting =(state) => {
+    console.log(state.user,'kk');
+    console.log(state.user.currentUser,'--');
+    return state.user
+}
+export const userSelector = createSelector([userSelecting],(user)=>{
+
+    return user.currentUser[0];
+})

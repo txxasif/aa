@@ -16,9 +16,18 @@ function Home(){
 function App() {
   const user = useSelector(userSelector);
   const dispatch = useDispatch();
-  console.log(user);
+  console.log(user,'hi from app');
+  async function done(){
+    const getResult = await fetch('http://localhost:8000/login',{
+        method : 'post',
+        headers:  { 'content-type': 'application/json'},
+        body: JSON.stringify({email:'asif@gmail.com',pass: 'asif'}),
+    });
+    const result = await getResult.json();
+    console.log(result,'pp');
+  }
   useEffect(()=>{
-    dispatch(setCurrentUser([{name: 'John', age:18}]));
+      done()
   },[dispatch])
   
   return (
