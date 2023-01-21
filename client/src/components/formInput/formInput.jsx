@@ -1,11 +1,9 @@
-export default function FormInput({setFromData,label,...other}) {
-    console.log(other);
+import './formInput.css'
+export function FormInput({setFromData,label,...other}) {
     return(
         <div className="group">
-            <input className="form-input"  {...other}/>
-            {
-                label ? (<label className={`${other.value?'shrink':''} form-input-label`}></label>):null
-            }
+            {/* <label className="label">{label}</label> */}
+            <input className="form-input" onChange={setFromData}{...other}/>
         </div>
     )
 }
